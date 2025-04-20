@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Instituto</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Estilos gerais -->
+<link rel="stylesheet" href="sobreinst.css">  <!-- Estilos específicos da página "Sobre" -->
+<link rel="shortcut icon" href="/imagens/cursos/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"></a>
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+        <ul class="menu">
+            <li><a href="/index.html">Início</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header class="header-sobre">
+       
+    </header>
+
+    <!-- Seção de Apresentação -->
+    <section class="sobre-container">
+        <div class="sobre-texto">
+            <h2>Quem Somos</h2>
+            <p>Somos uma plataforma dedicado a oferecer cursos tecnologicos de alta qualidade para capacitação profissional e pessoal. Nossa missão é democratizar o acesso ao ensino, proporcionando conhecimento acessível a todos.</p>
+
+            <h2>Nossa Missão</h2>
+            <p>Ser a principal referência em educação online, proporcionando um aprendizado inovador, acessível e de qualidade, que impacta positivamente a vida das pessoas e transforma o mercado de trabalho.</p>
+
+            <h2>Nossos Valores</h2>
+            <ul>
+                <li>📚 Qualidade no ensino</li>
+                <li>🌎 Acessibilidade para todos</li>
+                <li>🤝 Compromisso com o aprendizado</li>
+                <li>🚀 Inovação e tecnologia</li>
+            </ul>
+        </div>
+
+        <!--<div class="sobre-imagem">
+            <img src="imagens/instituto.jpg" alt="Imagem do Instituto">
+        </div> -->
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:suporte@instituto.com">suporte@instituto.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Instituto Cursos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

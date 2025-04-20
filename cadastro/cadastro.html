@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css" />
+  <link rel="shortcut icon" href="/imagens/cursos/logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="cadastro-container">
+    <div class="info-lado">
+      <h1>FGS CURSOS</h1>
+      <p>Pensando em um futuro mais promissor<br>para todos</p>
+      <img src="/imagens/cursos/ilustraçãoat.png" alt="Ilustração segurança">
+    </div>
+
+    <div class="form-lado">
+        <form action="processar_cadastro.php" method="POST">
+            <h2>Cadastrar</h2>
+          
+            <input type="text" name="nome" placeholder="Nome completo" required />
+            <input type="email" name="email" placeholder="E-mail" required />
+            <input type="email" name="confirmar_email" placeholder="Confirmar E-mail" required />
+            <input type="text" name="cpf" id="cpf" placeholder="CPF" required />
+            <input type="text" name="data_nasc" placeholder="dd/mm/aaaa" required />
+            <input type="password" name="senha" placeholder="Senha" required />
+            <input type="password" name="confirmar_senha" placeholder="Confirmar Senha" required />
+          
+            <button type="submit">Finalizar</button>
+          
+            <p class="login">Já tem uma conta? <a href="/login/login.html">Faça login</a></p>
+          </form>
+          
+    </div>
+  </div>
+  <script>
+    document.getElementById('cpf').addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, ''); // remove tudo que não for número
+      if (value.length > 11) value = value.slice(0, 11); // limita a 11 dígitos
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      e.target.value = value;
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat FGS</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="shortcut icon" href="/imagens/cursos/logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <div id="chat-container">
+        <!-- Barra Lateral com Histórico de Conversas -->
+        <aside id="history-sidebar">
+            <h3>Conversas</h3>
+            <ul id="history-list"></ul>
+            <button onclick="promptNewChat()">+ Nova Conversa</button>
+        </aside>
+
+        <!-- Corpo do Chat -->
+        <main id="chat-main">
+            <header>
+                <!-- <img src="imagens/logo.png" alt="Logo FGS" class="logo"> -->
+                <h1>Chat FGS</h1>
+            </header>
+
+            <div id="chat-box"></div>
+
+            <div id="input-area">
+                <input type="text" id="user-input" placeholder="Digite sua pergunta..." />
+                <button onclick="sendMessage()" id="send-btn">Enviar</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="chat.js"></script>
+
+</body>
+</html>

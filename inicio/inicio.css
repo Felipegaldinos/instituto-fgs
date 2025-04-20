@@ -1,0 +1,496 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/*novo estilo*/
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.topbar-left {
+  flex: 1;
+}
+
+
+.logo-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.topbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Estilização da barra de navegação */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #0F4C5C; /* Cor do menu */
+  color: white;
+  padding-top: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Exibir menu quando ativo */
+.navbar.active {
+  transform: translateX(0);
+}
+
+/* Botão para abrir o menu */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilização do menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.menu li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Estilo do menu de navegação */
+.navbar {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 0%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Esconder o menu inicialmente */
+.navbar .menu {
+  display: none;
+  flex-direction: column;
+  background: #3498db;
+  position: absolute;
+  top: 8px;
+  right: 5;
+  width: 180px;
+  padding: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .menu.active {
+  display: flex;
+}
+
+.navbar .menu li {
+  list-style: none;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.navbar .menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.navbar .menu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Estilo do botão hambúrguer */
+.menu-toggle {
+  position: fixed;
+  top: 7px;  /* Ajuste a altura */
+  left: 160%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: rgb(2, 1, 1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+
+/* Modo Escuro */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .course-card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .course-card a {
+  background: #7c7772;
+}
+
+.header {
+  background: url('/imagens/cursos/cursoonline.jpg') no-repeat center center/cover;
+  color: rgb(247, 247, 250);
+  padding: 180px 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de Alternar Tema no Canto Superior Direito */
+#theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 5px;
+  background: #605e5b;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: #3498db;
+  transform: scale(1.1);
+}
+
+/* Efeito de transição ao alternar o modo escuro */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .course-card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .course-card a {
+  background: #3498db;
+}
+
+
+/* Estilização da barra de pesquisa */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 500px;
+  padding: 12px 40px 12px 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+  border-color: #3498db;
+  box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.5);
+}
+
+.search-bar .search-icon:hover {
+  color: #3498db;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .search-bar input {
+      width: 80%;
+  }
+  .search-bar .search-icon {
+      right: 10%;
+  }
+}
+
+
+/* Layout do grid de cursos */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Animação de carregamento */
+.course-card {
+  background: white;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.course-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo dos cartões de curso */
+.course-card {
+  background: white;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Imagens dos cursos */
+.course-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Destaque na busca */
+.highlight {
+  background-color: #3498db;
+  color: black;
+  font-weight: bold;
+}
+
+/* Botão acessar curso */
+.course-card a {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.course-card a:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-bar input {
+      width: 80%;
+  }
+
+  .container {
+      grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.footer-section {
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section a:hover {
+  color: #3498db;
+}
+
+
+/* Botão do chat */
+#chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+#chat-btn:hover {
+  background: #0056b3;
+}
+.advantages-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.advantages-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.advantage-card {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.cta-section {
+  background-color: #007bff;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  background-color: #ffffff;
+  color: #007bff;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  
+}
+
+.cta-btn:hover {
+  background-color:#e2e6ea;
+}
